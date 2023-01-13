@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Parking UPV</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="fragment_main">Reserva de Parking</string>
+    <string name="fragment_step1">Realizar Reserva</string>
+    <string name="fragment_step2">Step 2</string>
+    <string name="fragment_end">End</string>
+    <string name="start">Reservar</string>
+    <string name="finish">Finish</string>
+    <string name="roll">Roll</string>
+    <string name="user">Your name</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/step1Fragment"
+        android:title="@string/fragment_step1" />
+    <item
+        android:id="@+id/step2Fragment"
+        android:title="@string/fragment_step2" />
+    <item
+        android:id="@+id/endFragment"
+        android:title="@string/fragment_end" />
+</menu>
