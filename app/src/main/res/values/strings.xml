@@ -5,11 +5,33 @@
     <string name="previous">Previous</string>
 
     <string name="fragment_main">Reserva de Parking</string>
-    <string name="fragment_step1">Realizar Reserva</string>
-    <string name="fragment_step2">Step 2</string>
-    <string name="fragment_end">End</string>
+    <string name="fragment_reservaPlaza">Reserva de Plaza</string>
     <string name="start">Reservar</string>
     <string name="finish">Finish</string>
     <string name="roll">Roll</string>
     <string name="user">Your name</string>
+    <string name="reserva">Realizar Reserva</string>
+    <string name="insertdatos">Introduzca los datos necesarios</string>
+    <string name="nombre">Nombre:</string>
+    <string name="nombreAux">Nombre de usuario</string>
+    <string name="hora_inicio">Hora Inicio:</string>
+    <string name="hora_fin">Hora Fin:</string>
+    <string name="numPlaza">Numero de Plaza</string>
+
+    <string-array name="horas">
+        <item>07:00</item>
+        <item>08:00</item>
+        <item>09:00</item>
+        <item>10:00</item>
+        <item>11:00</item>
+        <item>12:00</item>
+        <item>13:00</item>
+        <item>14:00</item>
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+    </string-array>
 </resources>

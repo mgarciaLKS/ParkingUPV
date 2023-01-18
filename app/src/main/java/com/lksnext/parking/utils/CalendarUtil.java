@@ -2,7 +2,7 @@ package com.lksnext.parking.utils;
 
 public class CalendarUtil {
 
-    public CalendarUtil() {
+    private CalendarUtil() {
     }
 
     public static String getDayOfWeek(int value) {
@@ -29,7 +29,13 @@ public class CalendarUtil {
             case 7:
                 day = "Sabado";
                 break;
+            default:
+                break;
         }
         return day;
+    }
+
+    public static Integer convertirHora(String hora){
+        return Integer.parseInt(hora.substring(0,2));
     }
 }

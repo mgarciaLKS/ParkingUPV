@@ -1,7 +1,9 @@
 package com.lksnext.parking.viewmodel;
 
+import android.app.Application;
 import android.view.View;
 
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import static com.lksnext.parking.utils.CalendarUtil.*;
@@ -12,7 +14,7 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.TimeZone;
 
-public class ReservaViewModel extends ViewModel {
+public class ReservaViewModel extends AndroidViewModel {
 
     public final MutableLiveData<String> dayLiveData = new MutableLiveData<>();
     private Calendar calendar;
@@ -21,7 +23,8 @@ public class ReservaViewModel extends ViewModel {
     private Integer month;
     private Integer year;
 
-    public ReservaViewModel() {
+    public ReservaViewModel(Application application) {
+        super(application);
         //Initialize the randomValue MutableLiveData
         calendar = Calendar.getInstance(TimeZone.getTimeZone("UTC"), Locale.forLanguageTag("es-ES"));
         dayLiveData.setValue(computeDay(calendar));

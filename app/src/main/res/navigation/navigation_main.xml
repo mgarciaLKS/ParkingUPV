@@ -17,10 +17,19 @@
     <fragment
         android:id="@+id/fragmentReserva"
         android:name="com.lksnext.parking.view.fragment.ReservaFragment"
-        android:label="@string/fragment_step1"
+        android:label="@string/reserva"
         tools:layout="@layout/fragment_reserva">
         <action
-            android:id="@+id/action_fragmentReserva_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_fragmentReserva_to_RealizarReserva"
+            app:destination="@id/fragmentRealizarReserva"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRealizarReserva"
+        android:name="com.lksnext.parking.view.fragment.RealizarReservaFragment"
+        android:label="@string/fragment_reservaPlaza"
+        tools:layout="@layout/fragment_realizar_reserva">
+        <argument
+            android:name="numPlaza"
+            app:argType="integer"/>
     </fragment>
 </navigation>

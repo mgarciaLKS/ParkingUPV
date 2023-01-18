@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="plazaVariable"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/plaza"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:text="@{plazaVariable}"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:text="Plaza 1" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/realizarReserva"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/layaut_rounded"
+            android:gravity="center"
+            android:text="@string/reserva"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+</layout>

@@ -52,12 +52,21 @@
                 app:layout_constraintStart_toEndOf="@+id/left"
                 app:layout_constraintTop_toTopOf="@id/left"
                 tools:text="1/2022" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/parkingRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/group_month"
+            tools:listitem="@layout/parking_row" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
-
         <variable
             name="viewModel"
             type="com.lksnext.parking.viewmodel.ReservaViewModel" />

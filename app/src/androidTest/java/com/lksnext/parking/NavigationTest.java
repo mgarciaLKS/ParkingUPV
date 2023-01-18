@@ -44,7 +44,7 @@ public class NavigationTest {
 
         //Step 1
         //Check if the title view is displayed
-        onView(allOf(withId(R.id.tv_title), withText(R.string.fragment_step1))).check(matches(isDisplayed()));
+        onView(allOf(withId(R.id.tv_title), withText(R.string.realizarReserva))).check(matches(isDisplayed()));
         //Type sample text in the EditText
         onView(withId(R.id.et_name)).perform(typeText(TEST_NAME), closeSoftKeyboard());
         //Perform click on next button
