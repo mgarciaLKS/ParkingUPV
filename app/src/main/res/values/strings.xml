@@ -5,12 +5,14 @@
     <string name="previous">Previous</string>
 
     <string name="fragment_main">Reserva de Parking</string>
-    <string name="fragment_reservaPlaza">Reserva de Plaza</string>
+    <string name="fragment_reservaPlaza">Realizar de Plaza</string>
+    <string name="fragment_verReserva">Ver Reserva</string>
     <string name="start">Reservar</string>
     <string name="finish">Finish</string>
     <string name="roll">Roll</string>
     <string name="user">Your name</string>
     <string name="reserva">Realizar Reserva</string>
+    <string name="verReserva">Ver Reserva</string>
     <string name="insertdatos">Introduzca los datos necesarios</string>
     <string name="nombre">Nombre:</string>
     <string name="nombreAux">Nombre de usuario</string>

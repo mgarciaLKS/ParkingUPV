@@ -22,12 +22,31 @@
         <action
             android:id="@+id/action_fragmentReserva_to_RealizarReserva"
             app:destination="@id/fragmentRealizarReserva"/>
+        <action
+            android:id="@+id/action_fragmentReserva_to_VerReserva"
+            app:destination="@id/fragmentVerReserva"/>
     </fragment>
     <fragment
         android:id="@+id/fragmentRealizarReserva"
         android:name="com.lksnext.parking.view.fragment.RealizarReservaFragment"
         android:label="@string/fragment_reservaPlaza"
         tools:layout="@layout/fragment_realizar_reserva">
+        <action
+            android:id="@+id/action_fragmentRealizarReserva_to_Reserva"
+            app:destination="@id/fragmentReserva" />
+        <argument
+            android:name="numPlaza"
+            app:argType="integer"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentVerReserva"
+        android:name="com.lksnext.parking.view.fragment.VerReservaFragment"
+        android:label="@string/fragment_verReserva"
+        tools:layout="@layout/fragment_ver_reserva">
+        <action
+            android:id="@+id/action_fragmentVerReserva_to_RealizarReserva"
+            app:destination="@id/fragmentRealizarReserva"
+            />
         <argument
             android:name="numPlaza"
             app:argType="integer"/>

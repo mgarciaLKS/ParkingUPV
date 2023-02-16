@@ -9,7 +9,7 @@
             type="String" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/LinearLayout02"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,26 +19,50 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/plaza"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:padding="10dp"
             android:background="@color/orange"
-            android:text="@{plazaVariable}"
             android:gravity="center"
+            android:text="@{plazaVariable}"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="Plaza 1" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/realizarReserva"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="1"
+            android:layout_marginStart="8dp"
             android:background="@drawable/layaut_rounded"
             android:gravity="center"
             android:text="@string/reserva"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="20sp" />
-    </LinearLayout>
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/plaza"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/verReserva"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/layaut_rounded"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="@string/verReserva"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/plaza"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

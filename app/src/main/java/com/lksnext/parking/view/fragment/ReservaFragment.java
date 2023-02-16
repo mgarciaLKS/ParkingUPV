@@ -17,9 +17,12 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.button.MaterialButton;
 import com.lksnext.parking.R;
 import com.lksnext.parking.adapter.ParkingAdapter;
 import com.lksnext.parking.databinding.FragmentReservaBinding;
+import com.lksnext.parking.model.Plaza;
+import com.lksnext.parking.view.activity.MainActivity;
 import com.lksnext.parking.viewmodel.MainViewModel;
 import com.lksnext.parking.viewmodel.ReservaViewModel;
 import com.lksnext.parking.utils.PlazasGenerator;
@@ -28,14 +31,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReservaFragment extends Fragment {
-
-    final int NUMEROPLAZAS = 9;
-
     FragmentReservaBinding mFragmentReservaBindingBinding;
     ReservaViewModel viewModel;
+    MainViewModel mMainViewModel;
     RecyclerView parkingRV;
     ParkingAdapter parkingAdapter;
-    List<String> plazas;
+    List<Plaza> plazas;
 
     public ReservaFragment() {
         // Required empty public constructor
@@ -52,14 +53,13 @@ public class ReservaFragment extends Fragment {
         parkingRV = mFragmentReservaBindingBinding.parkingRV;
         parkingRV.setLayoutManager((new LinearLayoutManager(getActivity())));
 
+        //MainViewModel
+        mMainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModel.class);
+        plazas = mMainViewModel.getPlazas();
+
         //Prepare the adapter
-        parkingAdapter = new ParkingAdapter(new ParkingAdapter.AdapterListener() {
-            @Override
-            public void buttonOnClick(View v, int position) {
-                onNextClicked(v, position);
-            }
-        });
-        plazas = numeroPlazas(NUMEROPLAZAS);
+        parkingAdapter = new ParkingAdapter(this::onClicked);
+        mMainViewModel.setPLazas(plazas);
         //AÑADIR AL CONSTRUCTOR
         parkingAdapter.setPlazasList(plazas);
 
@@ -81,9 +81,13 @@ public class ReservaFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    private void onNextClicked(View view, Integer position) {
-        //Navigate to Step1 fragment
-        NavDirections action = ReservaFragmentDirections.actionFragmentReservaToRealizarReserva(position);
+    private void onClicked(View view, Integer position, Boolean vacio) {
+        NavDirections action;
+        if (vacio) {
+            action = ReservaFragmentDirections.actionFragmentReservaToRealizarReserva(position);
+        } else {
+            action = ReservaFragmentDirections.actionFragmentReservaToVerReserva(position);
+        }
         Navigation.findNavController(view).navigate(action);
     }
 }

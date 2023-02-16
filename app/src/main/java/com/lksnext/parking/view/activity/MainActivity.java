@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -13,6 +14,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.lksnext.parking.R;
+import com.lksnext.parking.viewmodel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Toolbar toolbar;
+    public MainViewModel mMainViewModel;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mMainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         //Find views
         drawerLayout = findViewById(R.id.drawer_layout);
