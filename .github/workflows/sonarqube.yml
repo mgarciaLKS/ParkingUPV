@@ -40,6 +40,11 @@ jobs:
       - name: Grant execute permission to Gradle
         run: chmod +x ./gradlew
 
+      - name: Debug SonarQube connection
+        run: curl -v $SONAR_HOST_URL
+        env:
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
