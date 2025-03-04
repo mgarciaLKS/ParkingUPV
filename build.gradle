@@ -1,3 +1,14 @@
+plugins {
+  id "org.sonarqube" version "6.0.1.5171"
+}
+
+sonar {
+  properties {
+    property "sonar.projectKey", "mgarciaLKS_ParkingUPV_93ed5069-f3c8-44db-9b58-368d727827f9"
+    property "sonar.projectName", "ParkingUPV"
+  }
+}
+
 buildscript {
     repositories {
         google()
