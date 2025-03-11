@@ -6,4 +6,5 @@ metadata:
     github.com/project-slug: mgarciaLKS/ParkingUPV
 spec:
   type: other
+  owner: mgarcia@lksnext.com
   lifecycle: unknown
